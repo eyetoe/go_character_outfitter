@@ -10,7 +10,8 @@ import (
 func main() {
 
     http.HandleFunc("/", handler) // redirect all urls to the handler function
-    http.ListenAndServe(":667", nil) // listen for connections at port 9999 on the local machine
+    http.HandleFunc("/rpg/", handler) // redirect all urls to the handler function
+    http.ListenAndServe(":667", nil) // listen for connections at port 667 on the local machine
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -18,7 +19,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintln(w, "<html>")
 
     fmt.Fprintln(w, "<head>")
-    fmt.Fprintln(w, "<link rel='stylesheet' type='text/css' href='http://xonk.org/xonk.css' />")
+    fmt.Fprintln(w, "<link rel='stylesheet' type='text/css' href='http://xonk.org:8420/xonk.css' />")
     fmt.Fprintln(w, "</head>")
     fmt.Fprintln(w, "<body style='margin-top:40px'>")
 

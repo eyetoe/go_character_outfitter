@@ -2,11 +2,11 @@ body {
 	margin: 0;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
-	background-image: url("http://xonk.org/bg.jpg");
+	background-image: url("http://xonk.org:8420/bg.jpg");
 }
 table {
 	background-color: #DBDBC9
-	/* background-image: url(http://xonk.org/bg1.jpg)  */
+	/* background-image: url(http://xonk.org:8420/bg1.jpg)  */
 }
 pre,
 code {
