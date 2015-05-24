@@ -21,7 +21,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintln(w, "<link rel='stylesheet' type='text/css' href='http://xonk.org/xonk.css' />")
     fmt.Fprintln(w, "</head>")
 
-    fmt.Fprintln(w, "<center><table border='1' width='900' align=center><tr><td align='left'>")
+    fmt.Fprintln(w, "<center><table border='1' width='85%' align=center><tr><td align='left'>")
 
     fmt.Fprintln(w, "<h1>Random Character Outfitter</h1>")
     fmt.Fprintln(w, "<p><i>(refresh for a new hero)</i></p>")
