@@ -20,8 +20,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintln(w, "<head>")
     fmt.Fprintln(w, "<link rel='stylesheet' type='text/css' href='http://xonk.org/xonk.css' />")
     fmt.Fprintln(w, "</head>")
+    fmt.Fprintln(w, "<body style='margin-top:40px'>")
 
-    fmt.Fprintln(w, "<center><table border='1' width='85%' align=center><tr><td align='left'>")
+    //fmt.Fprintln(w, "<center><table border='1' width='85%' align=center><tr><td align='left'>")
+    fmt.Fprintln(w, "<center><table style='border:1px solid black;border-collapse:collapse; width:85%; text-align:right;'><tr><td align='left'>")
 
     fmt.Fprintln(w, "<h1>Random Character Outfitter</h1>")
     fmt.Fprintln(w, "<p><i>(refresh for a new hero)</i></p>")
@@ -36,6 +38,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "<p><i>It was a cold forboding morning and <b>"+get_FirstName()+"</b> was inspecting his <b>"+get_Melee()+"</b>, hoping for some action.  Just as papa <b>"+get_LastName()+"</b> had taught.  You can't be too prepared.</p><p>Suddenly <b>"+get_FirstName()+"</b> spied a <b>"+get_Monster()+"</b> coming over the horizon, but still out of range of his <b>"+get_Long()+"</b>.  It wasn't surprised and emitted a loud aggressive sound.</p><p>As the <b>"+get_Monster()+"</b> charged, <b>"+get_FirstName()+"</b> lobbed a <b>"+get_Gernade()+"</b> gernade toward the foe.  The creature was momentarily stunned while <b>"+get_FirstName()+"</b> pulled out his <b>"+get_Ranged()+"</b> and aimed at the beast.  Three shots were not enought to deter it, as the <b>"+get_Monster()+"</b> came ever closer.</p><p>Finally the beast arrived at close range.  With a quick stroke of the <b>"+get_Melee()+"</b> the <b>"+get_Monster()+"</b> took it right in the <b>"+get_Part()+"</b> and died in a lump.  This would be a good tale to tell over at the tavern tonight.  Three cheers for <b>"+get_FirstName()+"</b> <b>"+get_LastName()+"</b></p>")
 
     fmt.Fprintln(w, "</td></tr></table></center>")
+    fmt.Fprintln(w, "</body>")
     fmt.Fprintln(w, "</html>")
 }
 
